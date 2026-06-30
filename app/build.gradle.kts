@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example"
+    namespace = "com.vian.vianlauncher"
     compileSdk = 35
 
     defaultConfig {
