@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FF000000"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Vian Launcher"
+        android:textColor="#FFFFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please grant the required permissions to continue."
+        android:textColor="#FFCCCCCC"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btn_grant_permissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grant Permissions and Continue"
+        android:backgroundTint="#FF333333"
+        android:textColor="#FFFFFFFF" />
+
+</LinearLayout>

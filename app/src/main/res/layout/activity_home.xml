@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF444444">
+
+    <ImageView
+        android:id="@+id/iv_wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Workspace -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Page Indicators -->
+        <LinearLayout
+            android:id="@+id/ll_indicators"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <!-- Dock -->
+        <LinearLayout
+            android:id="@+id/ll_dock"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="#88000000">
+
+            <!-- Slots populated programmatically -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- App Drawer Overlay -->
+    <FrameLayout
+        android:id="@+id/fl_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E6000000"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search Apps..."
+                android:textColorHint="#FF888888"
+                android:textColor="#FFFFFFFF"
+                android:background="#FF333333"
+                android:padding="16dp"
+                android:layout_margin="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:clipToPadding="false" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
